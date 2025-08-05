@@ -1,0 +1,4 @@
+id,nombre,imagen_url,raza,edad,descripcion,adoptado,fecha_ingreso,fecha_actualizacion
+1,Max,https://images.unsplash.com/photo-1615751072497-5f5169febe17,Golden Retriever,3,Perro juguetón y cariñoso,True,2025-08-01 18:51:53.970933,2025-08-02 15:02:14.634222
+4,julio,https://images.dog.ceo/breeds/rottweiler/n02106550_6424.jpg,Rottweiler,0,Añadida desde el frontend,True,2025-08-02 15:03:12.075758,2025-08-02 15:03:50.309503
+5,binie,https://images.dog.ceo/breeds/retriever-curly/n02099429_3159.jpg,Labrador,0,Añadida desde el frontend,True,2025-08-04 21:06:27.062034,2025-08-04 21:07:06.093111

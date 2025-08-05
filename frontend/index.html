@@ -1,0 +1,114 @@
+  <!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio de Perritos - Encuentra tu compañero ideal</title>
+    <meta name="description" content="Adopta perritos hermosos y dales un hogar lleno de amor">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado principal -->
+        <header>
+            <h1><i class="fas fa-paw"></i> Refugio de Perritos</h1>
+            <p>Encuentra a tu compañero perfecto</p>
+        </header>
+
+        <!-- Sección de perros aleatorios -->
+        <section class="dog-api-section fade-in">
+            <h2><i class="fas fa-dog"></i> Perros Disponibles</h2>
+            <div  id="dog-image-container" class="dog-display">
+                <img id="dog-image" src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Perro aleatorio" loading="lazy">
+                <button id="get-dog">
+                    <i class="fas fa-random"></i> Obtener Perro Aleatorio
+                </button>
+            </div>
+            
+            <!-- Formulario para guardar mascotas -->
+            <div class="save-form fade-in">
+                <h3><i class="fas fa-heart"></i> ¿Quieres guardar esta mascota?</h3>
+                <div id="breed-select-container" class="form-group">
+                    <label for="breed-select">Raza:</label>
+                    <select id="breed-select">
+                        <option value="">Selecciona una raza...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pet-name">Nombre:</label>
+                    <input type="text" id="pet-name" placeholder="Escribe un nombre para la mascota">
+                </div>
+                <button id="save-dog" disabled>
+                    <i class="fas fa-save"></i> Guardar Mascota
+                </button>
+            </div>
+        </section>
+        
+        <!-- Sección de mascotas guardadas -->
+        <section class="saved-pets fade-in">
+            <h2><i class="fas fa-star"></i> Mis Mascotas Favoritas</h2>
+            <div id="pets-list" class="pets-grid">
+                <!-- Las mascotas se cargarán aquí dinámicamente -->
+                <div class="no-pets">
+                    <i class="fas fa-search"></i>
+                    <p>No hay mascotas guardadas aún</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de proceso de adopción -->
+        <section class="adoption-section fade-in">
+            <h2><i class="fas fa-home"></i> Proceso de Adopción</h2>
+            
+            <!-- Muestra cuando no hay mascota seleccionada -->
+            <div id="no-pet-selected" class="no-selection">
+                <i class="fas fa-info-circle"></i>
+                <p>Selecciona un perro de tu lista para iniciar el proceso de adopción.</p>
+            </div>
+            
+            <!-- Contenedor de la mascota seleccionada (oculto inicialmente) -->
+            <div id="selected-pet-display" class="selected-pet" style="display: none;">
+                <h3>Estás adoptando a: <span id="selected-pet-name"></span></h3>
+                <img id="selected-pet-image" src="" alt="Perro seleccionado" loading="lazy">
+                <p>Raza: <span id="selected-pet-breed"></span></p>
+                
+                <!-- Formulario de adopción -->
+                <div class="adoption-form">
+                    <h4><i class="fas fa-user-circle"></i> Completa tus datos</h4>
+                    <div class="form-group">
+                        <label for="adopter-name">Nombre completo:</label>
+                        <input type="text" id="adopter-name" placeholder="Tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="adopter-email">Correo electrónico:</label>
+                        <input type="email" id="adopter-email" placeholder="Tu correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="adopter-phone">Teléfono:</label>
+                        <input type="tel" id="adopter-phone" placeholder="Tu teléfono">
+                    </div>
+                    <button id="complete-adoption" class="secondary">
+                        <i class="fas fa-check-circle"></i> Completar Adopción
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="fade-in">
+            <p>© 2023 Refugio de Perritos. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>

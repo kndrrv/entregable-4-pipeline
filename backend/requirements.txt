@@ -1,0 +1,5 @@
+flask==2.3.2
+flask-cors==3.0.10
+sqlalchemy==1.4.46  # Versión específica para evitar problemas con 2.0
+python-dotenv==1.0.0 
+requests==2.31.0 
